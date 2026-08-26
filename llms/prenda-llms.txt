@@ -1,0 +1,64 @@
+# Prenda
+
+> Prenda, Inc. (Mesa, Arizona) is a K-8 education technology company whose software lets an adult
+> open and run a microschool — a learning community of roughly five to ten students — from a home,
+> studio, or office. Founded by Kelly Smith out of the Prenda Code Club he began at a public library
+> in 2013, Prenda opened its first microschool in January 2018 and now supports more than 1,000
+> guides teaching nearly 10,000 learners across multiple US states.
+
+Prenda bundles a plug-and-play platform with curriculum, guide training, and academic coaching.
+Guides use it to manage enrollment, run adaptive diagnostic assessments in math and reading, track
+progress against Prenda's four-mode "connect, conquer, collaborate, create" learning day, process
+payments, and publish a marketing site for their school. Enrollment is commonly funded through
+state school-choice and education savings account programs. Prenda raised a $20M round led by 776
+in 2022.
+
+## API status
+
+Prenda publishes NO public API. As of 2026-08-26 there is no developer portal, no API reference, no
+OpenAPI/AsyncAPI/GraphQL/gRPC/WSDL contract, no MCP server, no A2A agent card, no webhook catalog,
+and no /.well-known document on any Prenda host. The following were probed and returned no
+result: api.prenda.com, developer.prenda.com, docs.prenda.com, dev.prenda.com and app.prenda.com do
+not resolve in DNS; /openapi.json, /llms.txt and all of /.well-known/{security.txt,
+openid-configuration, oauth-authorization-server, api-catalog, ai-plugin.json, agent-card.json,
+agent.json} return 404 on www.prenda.com, help.prenda.com, discover.prenda.com and
+microschools.prenda.com. The platform is closed and end-user facing.
+
+## Public surfaces
+
+- [Prenda](https://www.prenda.com/): Company site and product overview.
+- [About Prenda](https://www.prenda.com/who-we-are): Origin, mission, and scale.
+- [Learning Model](https://www.prenda.com/learning-experience): The four-mode learning day.
+- [Become a Guide](https://www.prenda.com/become-a-guide): How an adult opens a microschool.
+- [Find a Microschool](https://www.prenda.com/find-a-microschool): Parent-facing enrollment search.
+- [Microschools](https://microschools.prenda.com/): Microschool program site.
+- [Start My Microschool](https://discover.prenda.com/): Sign-up and discovery funnel (Prenda World).
+- [Help Center](https://help.prenda.com/knowledge): Policies and support articles.
+- [KindlED Blog](https://www.prenda.com/blog): Company blog.
+- [The KindlED Podcast](https://www.prenda.com/podcast): Podcast for parents and educators.
+- [Contact](https://www.prenda.com/contact): General contact; support@prenda.com.
+- [Press](https://www.prenda.com/press): Press resources.
+- [Careers](https://www.prenda.com/page/jobs): Open roles.
+- [Terms of Service](https://www.prenda.com/page/terms-of-service)
+- [Privacy Policy](https://www.prenda.com/page/privacy-policy)
+- [Community Standards](https://www.prenda.com/community-standards)
+
+## Open source
+
+- [prenda-school on GitHub](https://github.com/prenda-school): Prenda, Inc.'s GitHub organization.
+- [prenda-ds](https://github.com/prenda-school/prenda-ds): Prenda Design System for MUI v6 (MIT),
+  published to GitHub Packages as @prenda-school/prenda-ds v0.3.3.
+- [prenda-icons](https://github.com/prenda-school/prenda-icons): SVG icons with a MUI v6 dependency
+  (MIT), @prenda-school/prenda-icons v2.0.0.
+- [@prenda/spark](https://www.npmjs.com/package/@prenda/spark): Superseded first-generation React
+  component library, last published 2023-04-18 at 2.0.0-alpha.18.
+- [@prenda/dataviz](https://www.npmjs.com/package/@prenda/dataviz): Charting components, v0.0.4,
+  last published 2024-07-08.
+
+These are the components Prenda uses to build its own applications. Installing them integrates you
+with nothing at Prenda; there is no API behind them.
+
+## Optional
+
+- [Prenda on Forge Global](https://forgeglobal.com/prenda_stock/): Secondary-market share listing.
+- [API Evangelist profile](https://apis.io/provider/prenda/): Catalog entry for Prenda.

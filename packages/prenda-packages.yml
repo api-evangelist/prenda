@@ -1,0 +1,115 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  registry.npmjs.org metadata endpoint, plus package.json read from the prenda-school GitHub
+  organization (github.com/prenda-school), confirmed as Prenda, Inc. by its GitHub org profile
+  (name "Prenda, Inc.", blog https://prenda.com/, location Mesa, AZ).
+summary: >-
+  Prenda publishes NO API client SDK in any language, on any registry — because Prenda publishes no
+  API. Every first-party package found is part of the Prenda Design System, a React/MUI component
+  and icon library the company uses to build its own guide- and parent-facing apps (discover.prenda.com
+  is a MUI-based app that matches it). The packages are listed here because they are genuinely
+  first-party and publicly resolvable, not because they are an integration surface. No `SDKs`
+  pointer is emitted in apis.yml: crediting these as API SDKs would assert an API that does not exist.
+registries_searched:
+- registry: npm
+  result: 3 first-party @prenda/* packages found, all design-system
+- registry: pypi
+  result: none (pypi.org/pypi/prenda/json -> 404)
+- registry: rubygems
+  result: none searched-for name published
+- registry: crates.io
+  result: none
+- registry: nuget
+  result: none
+- registry: maven-central
+  result: none
+- registry: pkg.go.dev
+  result: none
+- registry: packagist
+  result: none
+- registry: github-packages
+  result: 2 first-party packages declared via publishConfig; registry requires auth to read
+packages:
+- name: '@prenda/spark'
+  registry: npm
+  url: https://www.npmjs.com/package/@prenda/spark
+  official: true
+  kind: design-system
+  language: TypeScript
+  version: 2.0.0-alpha.18
+  published: '2023-04-18'
+  first_published: '2021-02-16'
+  release_count: 55
+  license: UNLICENSED
+  note: >-
+    Prenda Spark, the company's first-generation React component library. Last published
+    2023-04-18 and stuck on an alpha tag; superseded by @prenda-school/prenda-ds. Not an API client.
+- name: '@prenda/spark-icons'
+  registry: npm
+  url: https://www.npmjs.com/package/@prenda/spark-icons
+  official: true
+  kind: design-system
+  language: TypeScript
+  version: 2.0.0-alpha.18
+  published: '2023-04-18'
+  first_published: '2021-07-30'
+  release_count: 43
+  license: UNLICENSED
+  note: Icon set companion to @prenda/spark. Same abandoned 2023-04-18 alpha release. Not an API client.
+- name: '@prenda/dataviz'
+  registry: npm
+  url: https://www.npmjs.com/package/@prenda/dataviz
+  official: true
+  kind: charting
+  language: TypeScript
+  version: 0.0.4
+  published: '2024-07-08'
+  first_published: '2024-07-08'
+  release_count: 2
+  license: null
+  note: >-
+    Two releases on a single day in July 2024 and nothing since; no license field declared.
+    Internal charting components, not an API client.
+- name: '@prenda-school/prenda-ds'
+  registry: github-packages
+  url: https://github.com/prenda-school/prenda-ds
+  official: true
+  kind: design-system
+  language: TypeScript
+  version: 0.3.3
+  published: null
+  license: MIT
+  note: >-
+    Current Prenda Design System for MUI v6. version read from package.json on the `main` branch;
+    `published` is null because package.json declares publishConfig.registry
+    https://npm.pkg.github.com/ and GitHub Packages returns no anonymous metadata, so there is no
+    unauthenticated release date to record. The repo itself was last pushed 2026-07-27, making this
+    the only actively maintained first-party package Prenda ships.
+- name: '@prenda-school/prenda-icons'
+  registry: github-packages
+  url: https://github.com/prenda-school/prenda-icons
+  official: true
+  kind: design-system
+  language: TypeScript
+  version: 2.0.0
+  published: null
+  license: MIT
+  homepage: https://prenda-school.github.io/prenda-icons/
+  note: >-
+    SVG icon library with a MUI v6 peer dependency. Same GitHub Packages situation as prenda-ds —
+    version from package.json on `main`, no anonymous registry metadata endpoint, so published is
+    null rather than guessed. Repo last pushed 2026-06-15.
+- name: '@prenda/design-system'
+  registry: none
+  url: https://github.com/prenda-school/design-system
+  official: true
+  kind: design-system
+  language: TypeScript
+  version: 0.0.0
+  published: null
+  license: null
+  note: >-
+    Declares "private": true in package.json and is absent from npm, so it is a source repo rather
+    than a distributed package. Superseded by prenda-ds; last pushed 2024-07-08. Storybook was
+    hosted on Chromatic (main--60b7f55f55fbd4004993da4c.chromatic.com).

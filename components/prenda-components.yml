@@ -1,0 +1,68 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://github.com/prenda-school (org profile confirms "Prenda, Inc.", blog https://prenda.com/,
+  Mesa AZ), plus package.json on the main branch of prenda-ds, prenda-icons and design-system, and
+  npm registry metadata for @prenda/spark and @prenda/spark-icons.
+summary: >-
+  The Prenda Design System (PDS) is the only developer-facing surface Prenda publishes. It is a
+  React component and icon library built on MUI, distributed to GitHub Packages under an MIT
+  license and open to read on GitHub. IMPORTANT SCOPE NOTE: these are the components Prenda uses to
+  build its OWN guide- and parent-facing apps. They are not embeddable widgets a third party
+  integrates with a Prenda account, and there is no hosted/prebuilt surface, embedded dashboard, or
+  loader script offered to customers. Anyone can install and use PDS, but doing so connects them to
+  nothing at Prenda.
+families:
+- family: Prenda Design System (current)
+  framework: React
+  base: MUI v6
+  license: MIT
+  repository: https://github.com/prenda-school/prenda-ds
+  package: '@prenda-school/prenda-ds'
+  registry: https://npm.pkg.github.com/
+  version: 0.3.3
+  last_pushed: '2026-07-27'
+  components: >-
+    Not enumerated here — the repo publishes no component index or public Storybook, so listing
+    component names would be a guess. Read the package source for the surface.
+- family: Prenda Icons
+  framework: React
+  base: MUI v6 (peer dependency)
+  license: MIT
+  repository: https://github.com/prenda-school/prenda-icons
+  package: '@prenda-school/prenda-icons'
+  registry: https://npm.pkg.github.com/
+  version: 2.0.0
+  last_pushed: '2026-06-15'
+  gallery: https://prenda-school.github.io/prenda-icons/
+  gallery_note: >-
+    Served 200 but the body is a 709-byte client-rendered React shell ("React App"), so the icon
+    set is not machine-readable from that URL.
+- family: Prenda Spark (superseded)
+  framework: React
+  license: UNLICENSED
+  packages:
+  - '@prenda/spark'
+  - '@prenda/spark-icons'
+  registry: npm
+  version: 2.0.0-alpha.18
+  last_published: '2023-04-18'
+  status: abandoned
+  note: >-
+    First-generation library. Never left alpha and has had no release since April 2023. Superseded
+    by prenda-ds.
+- family: Prenda DataViz
+  framework: React
+  packages:
+  - '@prenda/dataviz'
+  registry: npm
+  version: 0.0.4
+  last_published: '2024-07-08'
+  status: dormant
+  note: Two releases on one day, nothing since, no declared license.
+loaders: []
+observed_in_production:
+- host: discover.prenda.com
+  evidence: >-
+    The served HTML inlines MUI CSS custom properties (--mui-palette-*) and the Inter/Poppins font
+    stack, matching the MUI-based design system. Probed 2026-08-26, HTTP 200.
